@@ -1,0 +1,62 @@
+html, body{
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+a{
+    font-size: 20px;
+    color: blue;
+    text-decoration: none;
+}
+
+/* div{
+    margin: 50px auto;
+    width: 300px;
+    height: 300px;
+    border: 2px solid;
+    background-color: yellow;
+    border-radius: 20px; скруглення кутів
+    overflow: hidden; брізка контенту, що виходить за батьківстький обʼєкт
+    overflow-x: auto; Якщо контент перебільшує розмір блоку по висоті, то зʼявлється скрол
+    overflow-y: auto; Якщо контент перебільшує розмір блоку по ширині, то зʼявлється скрол
+    width: 100%; Якщо ми вставляємо зображення, щоб воно розтянулось на 100% батьківського обʼєкту
+} */
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.container{
+    width: 800px;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+
+.logo{
+    display: inline-block;
+    width: 397px;
+    background-color: yellowgreen;
+}
+
+nav{
+    display: inline-block;
+    width: 397px; /* Для інлайнових блоків треба встановлювати ширину на 3 пікселі меншу */
+    text-align: right;
+    background-color: lavender;
+}
+
+button{
+    border: 2px solid blue;
+    text-align: center;
+    padding: 5px 10px;
+    background: none;
+}
+
+section{
+    background-color: aquamarine;
+}

@@ -1,0 +1,67 @@
+html, body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    width: auto;
+    border: 1px solid black;
+    margin: 5px auto;
+    padding: 0 auto;
+}
+.logo{
+    /* border: 1px solid red; */
+    display: inline-block;
+    width: auto;
+}
+.meny{
+    /* border: 1px solid red; */
+    display: inline-block;
+    width: auto;
+    text-align: right;
+    white-space: nowrap;
+    margin: 5px;
+    
+}
+a{
+    text-decoration: none;
+}
+
+.part1{
+    width: auto;
+    height: 600px;
+    border: 1px solid black;
+    /* margin: 2px auto; */
+    padding: 0 auto;
+    text-align: center;
+    margin: 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.text-part1{
+    border: 1px solid red;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    text-align: left;
+    /* min-height: 10em; */
+    /* display: table-cell; */
+    /* vertical-align: middle; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+
+}
+.title{
+    font-size: 47px;
+}
+#amet{
+    font-size: 16px;
+}
+#iphone{
+    display: inline-block;
+    width: 500px;
+    margin-left: 58px;
+    
+    
+}

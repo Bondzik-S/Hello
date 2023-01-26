@@ -9,6 +9,93 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    
+    <!-- Для того, щоб курсор відображася і label був звʼязаний з input(введеною інформацією, потрібно input надати значення id і це ж значення додати до label в значення for) plaseholder - виводиться в інпуті сіреньким кольором(підказка) -->
+    <form action=""> <!-- Тег обгортки -->
+        <label for="name"> <!-- Тег для підпису -->
+            Name
+        </label>
+        <input type="text" placeholder="Type your name" id="name ">
+
+        <br><br>
+
+        <!-- В даному випадку пароль буде виводитись кружочками -->
+        <label for="passwordInput">
+            Password
+        </label>
+        <input type="password" placeholder="Type your password" id="passwordInput">
+
+        <br><br>
+
+        <fieldset> <!-- Рамка з полями для вводу -->
+            <legend>
+                User data
+            </legend>
+            <div>
+                <label for="userName"> <!-- Тег для підпису -->
+                    User Name
+                </label>
+                <input type="text" placeholder="Type your user name" id="userName">
+            </div>
+            <div>
+                <label for="userAge"> <!-- Тег для підпису -->
+                    User Age
+                </label>
+                <input type="text" disabled placeholder="Type your user age" id="userAge"> <!-- disabled - атрибут, який блокує введення даних -->
+            </div>
+        </fieldset>
+
+        <br><br>
+
+        <select name="" id="select"> <!-- Випадаючий список -->
+        <option value="01">Html</option> <!-- Елементи випадаючого списку; value - значення, яке передається розробнику для подальшої роботи -->
+        <option value="02">Css</option>
+        <option value="03">Js</option>
+        <option value="04">Sсss</option>
+        </select>
+
+        <br><br>
+
+        <textarea name="" id="" cols="30" rows="10"></textarea> <!-- Тег, який використовується для введення великої кулькості тексту; cols - кількість символів в ширину, rows - кількість рядків -->
+        <br><br>
+
+        <div>
+            Male
+            <input type="radio" name="gender" id="">
+            <!-- Для групування радіобатонів потрібно обирати однакове імʼя (name) -->
+        </div>
+        <div>
+            Female
+            <input type="radio" name="gender" id="">
+        </div>
+        <div>
+            Non standart
+            <input type="radio" name="gender" id="">
+        </div>
+
+        <br><br><br>
+        
+        <h3>
+            Select car models
+        </h3>
+        <div>
+            Mazda
+            <input type="checkbox" name="vehiche" id="">
+        </div>
+        <div>
+            Audi
+            <input type="checkbox" name="vehiche2" id="">
+        </div>
+        <div>
+            Reno
+            <input type="checkbox" name="vehiche3" id="">
+        </div>
+
+        <br><br><br>
+
+        <div>
+            <input type="submit" value="Відправка форми">
+        </div>
+        <button>Button</button>
+    </form>
 </body>
 </html>

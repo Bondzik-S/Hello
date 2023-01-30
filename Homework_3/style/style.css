@@ -4,64 +4,347 @@ html, body{
 
 .header{
     width: auto;
-    border: 1px solid black;
+    height: 65px;
+    /* border: 1px solid black; */
     margin: 5px auto;
-    padding: 0 auto;
+    padding: 16px 12px 16px 12px;
 }
 .logo{
     /* border: 1px solid red; */
     display: inline-block;
-    width: auto;
+    width: 183px;
+    height: 64px;
+    /* height: 64px;
+    font-size: 27px; */
+    font-weight: 600;
+    font-size: 27px;
 }
 .meny{
-    /* border: 1px solid red; */
     display: inline-block;
     width: auto;
     text-align: right;
     white-space: nowrap;
-    margin: 5px;
+    /* margin-top: 20px; */
+    font-size: 21px;
+    margin-top: 10px
     
+}
+#btn-header{
+    background: none;
+    border: 1px solid #2203E4;
+    color: #2203E4;
+    width: 128px;
+    height: 45px;
 }
 a{
     text-decoration: none;
+    color: black;
 }
+p{
+    margin: 0;
+}
+
 
 .part1{
     width: auto;
-    height: 600px;
-    border: 1px solid black;
-    /* margin: 2px auto; */
+    height: 700px;
+    /* border: 1px solid black; */
     padding: 0 auto;
     text-align: center;
     margin: 0 auto;
+
+    /* Зробити елемент посередині відносно горизонталі та вертикалі */
+
     display:flex;
     align-items:center;
     justify-content: center;
 }
 .text-part1{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: inline-block;
     width: auto;
     height: auto;
     text-align: left;
-    /* min-height: 10em; */
-    /* display: table-cell; */
-    /* vertical-align: middle; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-
 }
 .title{
+    width: 572px;
+    height: 56px;
     font-size: 47px;
+    font-weight: bold;
 }
 #amet{
     font-size: 16px;
+    margin-top: 25px;
+    width: 611px;
+    height: 38px;
 }
 #iphone{
     display: inline-block;
     width: 500px;
     margin-left: 58px;
-    
-    
+}
+#bt1-part1{
+    background: none;
+    border: none;
+    background-color: #0062FF;
+    color: white;
+    width: 94px;
+    height: 39px;
+    margin-top: 24px;
+}
+#bt2-part1{
+    background: none;
+    border: 1px solid #575757;
+    width: 94px;
+    height: 39px;
+    width: 135px;
+    height: 39px;
+    margin-top: 24px;
+    color: #575757
+}
+
+
+.part2{
+    width: auto;
+    height: auto;
+    /* border: 1px solid black; */
+    /* margin: 0 auto; */
+    padding: 0 auto;
+    /* text-align: center; */
+
+    /* display:flex;
+    align-items:center;
+    justify-content: center; */
+}
+#autors{
+    /* border: 1px solid blue; */
+    text-align: center;
+    margin: 0 auto;
+    width: 611px;
+    height: auto;
+}
+#autors-title{
+    margin: 0 auto;
+    font-size: 36px;
+    font-weight: bold;
+    height: 43px;
+    width: 145px;
+    /* border: 1px solid red; */
+}
+#autors-text{
+    /* border: 1px solid red; */
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    color: #575757;
+    font-size: 16px;
+    width: 611px;
+    height: 38px;
+}
+#inform-autors{
+    /* border: 1px solid blue; */
+    width: auto;
+    height: auto;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-top: 36px;
+}
+#foto-mark{
+    display: inline-block;
+}
+#mark-headers{
+    margin-left: 34px;
+}
+#name-mark{
+    font-size: 27px;
+    font-weight: bold;
+}
+#mark-vork{
+    font-size: 21px;
+    color: #575757;
+    margin-bottom: 12px;
+}
+#mark-text{
+    width: 645px;
+    height: 57px;
+    color: #575757;
+    margin-bottom: 24px;
+}
+.mini-img{
+    margin-right: 19px;
+}
+#biogr-mark{
+    margin-left: 112px;
+}
+#Gregory-Paragraph{
+    font-size: 21px;
+    color: #DEA405;
+    font-weight: 500;
+}
+#Programmer{
+    font-size: 16px;
+    color: #FFBE0B;
+}
+#inf-1{
+    display: inline-block;
+}
+#Mark-Headers{
+    margin-top: 8px;
+    font-size: 27px;
+    font-weight: bold;
+}
+#Graphic-designer{
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #575757;
+}
+#Henry-Action{
+    color: #DEA405;
+    font-weight: 500;
+    font-size: 21px;
+}
+#Analyst{
+    color: #FFBE0B;
+    font-size: 16px;
+}
+#strelka{
+    margin-bottom: 65px;
+    margin-right: 8px
+}
+
+
+#part3{
+    background-color: #0062FF;
+    margin-top: 143px;
+    padding-top: 71px;
+    height: 629px;
+}
+
+
+/* Наступні три для заголовків дівів (централізація) */
+.center-text-title{
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+.title-settings{
+    font-size: 36px;
+    font-weight: 600;
+}
+.text-settings{
+    font-size: 16px;
+    margin-top: 16px;
+    width: 611px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 64px;
+}
+
+
+.level-for-who{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.for-students{
+    height: 125px;
+    width: 615px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.img-level{
+    display: inline-block;
+}
+.text-block{
+    display: inline-block;
+    width: 451px;
+    margin-left: 34px;
+    /* text-align: right; */
+}
+.title-level{
+    font-size: 27px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+.text-level{
+    margin-top: 8px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+#i-want-it{
+    border: 1px solid #2203E4;
+    background-color: #FFFFFF;
+    color: #2203E4;
+    width: 99px;
+    height: 39px;
+}
+
+
+#block-text-foto{
+    display:flex;
+    align-items:center;
+    justify-content: center;  
+}
+.block-text{
+    text-align: center;
+    margin-bottom: 24px;
+    margin-right: 48px;
+}
+.settings-block-title{
+    font-size: 21px;
+    font-weight: 500;
+}
+.settings-block-text{
+    color: #575757;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+#part5{
+    background-color: #FFBE0B;
+    text-align: center;
+}
+#jones-david{
+    margin-bottom: 32px;
+}
+
+#text-stars-product{
+    display:flex;
+    align-items:center;
+    justify-content: center;  
+}
+#add-to-start{
+    width: 122px;
+    height: 39px;
+    background-color: #0062FF;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 16px;
+}
+
+#type-email{
+    background-color: rgba(58, 134, 255, 0.2);
+    height:43px;
+    width: 508px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-left: 24px;
+    color: #2203E4;
+}
+#btn-discont{
+    height: 39px;
+    width: 533px;
+    border: none;
+    background-color: #0062FF;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 105px;
+    margin-left: 454px;
 }

@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container{
+    /* width: 70%; */
+    margin: 0 auto;
+    border: 1px solid red;
+    
+}
+.rel{
+    background-color: green;
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    float: left;
+    top: 100px;
+    /* position: relative; Для того, щоб отримати можливість переміщати обʼєкти з накладанням, маємо записати цей код. Він в свою чергу вже надає нам можливість користуватись такими стилями як left, right, top, bottom, але, які б переміщення ми не виконували, за обʼєктом залишається(зарезервоване) його початкове зн-ня.
+
+    Коли ми пропишемо для елементу будь-яку крайню позицію, якщо в нас вказані розміри елементу в відсотках, позиція буде враховувати це місце та відзеркалювати його.
+    
+    z-index використовується для того, щоб ми мали змогу виносити обʼєкти на передній/задній план. Відʼжмні значення використовувати не пекомендовано. Стандартні зн-ня від 0 до 999 */
+
+    /* position: absolute; */ /* При position: absolute обʼєкти стискаються в одній точці та для них не враховується висота (основне використання - для накладання обʼєктів один на оден) */
+    
+    
+
+}
+.rel.fixed{
+    /* position: fixed; */ /* Блоки з позішн фиксд прикріпляється на вибраному місці при скролі. 
+    Для позишн фіксед маємо писати ширину 100% (хедер), оскільки браузер не враховує цього, та надає довжину по довжині контенту*/
+}
+p{
+    width: 100px;
+    font-size: 20px;
+}
+header{
+    background-color: blanchedalmond;
+    height: 100px;
+    padding: 20px;
+    /* position: fixed; */
+    top: 0;
+    /* width: 100%; */
+    position: sticky; /* Для фіксованого хедеру. Для стікі обовʼязково треба збільшувати зет-індекс. */
+    z-index: 5;
+}
+
+button{
+    padding: 5px 10px;
+    position: relative;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+button span{
+    display: inline-block;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    position: absolute;
+    right: -20px;
+    top: -15px;
+}
+
+button:hover{
+    background-color: rgb(255, 98, 0);
+    border: 2px solid black;
+}
+button:hover span{
+    background-color: yellow;
+}
+header:hover{
+    background-color: greenyellow;
+}

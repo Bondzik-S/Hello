@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box; /* Всі елементи розраховуються по тій ширині, яка мені потрібна */
+}
+.clearfix::after{ /* Якщо використовуємо на батьківському блоці float? то додаємо клас clearfix */
+    content: "";
+    clear: both;
+    display: table;
+}
+.example{
+    margin: 50px auto;
+    width: 500px;
+    text-align: center;
+    /* border: 3px solid black; */
+}
+.dib{
+    width: 200px;
+    /* display: inline-block; */
+    background-color: yellow;
+    float: left; /* Старе правило, для розташування обʼєктів один за одним, без видимого пропуску */
+}
+.left{
+     float: left; /* Підходить для розміщення виликих шматків розмітки */
+}
+.right{
+    float: right;
+}
+.row{
+    margin-bottom: 40px;
+}
+.student-item{
+    width: 607px;
+}
+.img-block{
+    width: 125px;
+
+}
+.text-block{
+    width: 451px;
+}
+.wrapper{
+    width: 1220px;
+    margin: 0 auto;
+}

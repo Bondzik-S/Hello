@@ -26,8 +26,10 @@ html, body{
     white-space: nowrap;
     /* margin-top: 20px; */
     font-size: 21px;
-    margin-top: 10px
-    
+    margin-top: 10px;
+}
+.meny a{
+    margin-right: 24px;
 }
 #btn-header{
     background: none;
@@ -45,6 +47,48 @@ p{
 }
 
 
+/* Зробити елемент посередині відносно горизонталі та вертикалі */
+.center-text-block{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+
+/* Якщо використовуємо на батьківському блоці float, то додаємо клас clearfix */
+.clearfix::after{ 
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Розміщує елементи зліва/справа замість інлайнових блоків */
+.left{
+    float: left; 
+}
+
+.right{
+   float: right;
+}
+
+.title-h2{
+    font-size: 47px;
+    color: black;
+}
+
+.title-h3{
+    font-size: 36px;
+    color: black;
+}
+
+.text-filling{
+    color: black;
+    font-size: 16px;
+}
+
+.bold{
+    font-weight: 600;
+}
 .part1{
     width: auto;
     height: 700px;
@@ -52,16 +96,10 @@ p{
     padding: 0 auto;
     text-align: center;
     margin: 0 auto;
-
-    /* Зробити елемент посередині відносно горизонталі та вертикалі */
-
-    display:flex;
-    align-items:center;
-    justify-content: center;
 }
 .text-part1{
     /* border: 1px solid red; */
-    display: inline-block;
+    /* display: inline-block; */
     width: auto;
     height: auto;
     text-align: left;
@@ -69,17 +107,15 @@ p{
 .title{
     width: 572px;
     height: 56px;
-    font-size: 47px;
     font-weight: bold;
 }
-#amet{
-    font-size: 16px;
+.amet{
     margin-top: 25px;
     width: 611px;
     height: 38px;
 }
 #iphone{
-    display: inline-block;
+    /* display: inline-block; */
     width: 500px;
     margin-left: 58px;
 }
@@ -107,14 +143,7 @@ p{
 .part2{
     width: auto;
     height: auto;
-    /* border: 1px solid black; */
-    /* margin: 0 auto; */
     padding: 0 auto;
-    /* text-align: center; */
-
-    /* display:flex;
-    align-items:center;
-    justify-content: center; */
 }
 #autors{
     /* border: 1px solid blue; */
@@ -131,24 +160,16 @@ p{
     width: 145px;
     /* border: 1px solid red; */
 }
-#autors-text{
+.autors-text{
     /* border: 1px solid red; */
     margin-top: 12px;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 0px;
     color: #575757;
-    font-size: 16px;
-    width: 611px;
-    height: 38px;
 }
-#inform-autors{
+.inform-autors{
     /* border: 1px solid blue; */
     width: auto;
     height: auto;
-    display:flex;
-    align-items:center;
-    justify-content: center;
     margin-top: 36px;
 }
 #foto-mark{
@@ -166,7 +187,7 @@ p{
     color: #575757;
     margin-bottom: 12px;
 }
-#mark-text{
+.mark-text{
     width: 645px;
     height: 57px;
     color: #575757;
@@ -227,35 +248,19 @@ p{
 /* Наступні три для заголовків дівів (централізація) */
 .center-text-title{
     text-align: center;
-    width: auto;
-    height: auto;
 }
-.title-settings{
-    font-size: 36px;
-    font-weight: 600;
-}
+
 .text-settings{
-    font-size: 16px;
-    margin-top: 16px;
     width: 611px;
-    height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 64px;
 }
 
 
-.level-for-who{
-    display:flex;
-    align-items:center;
-    justify-content: center;
-}
 .for-students{
     height: 125px;
     width: 615px;
-    display:flex;
-    align-items:center;
-    justify-content: center;
 }
 .img-level{
     display: inline-block;
@@ -273,7 +278,6 @@ p{
 }
 .text-level{
     margin-top: 8px;
-    font-size: 16px;
     color: #FFFFFF;
 }
 #i-want-it{
@@ -285,11 +289,6 @@ p{
 }
 
 
-#block-text-foto{
-    display:flex;
-    align-items:center;
-    justify-content: center;  
-}
 .block-text{
     text-align: center;
     margin-bottom: 24px;
@@ -301,7 +300,6 @@ p{
 }
 .settings-block-text{
     color: #575757;
-    font-size: 16px;
     margin-top: 12px;
 }
 
@@ -313,11 +311,6 @@ p{
     margin-bottom: 32px;
 }
 
-#text-stars-product{
-    display:flex;
-    align-items:center;
-    justify-content: center;  
-}
 #add-to-start{
     width: 122px;
     height: 39px;
@@ -327,7 +320,7 @@ p{
     margin-top: 16px;
 }
 
-#type-email{
+/* #type-email{
     background-color: rgba(58, 134, 255, 0.2);
     height:43px;
     width: 508px;
@@ -335,10 +328,22 @@ p{
     padding-top: 25px;
     padding-left: 24px;
     color: #2203E4;
+} */
+input{
+    background-color: rgba(58, 134, 255, 0.2);
+    width: 482px;
+    border: none;
+    border-radius: 12px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 26px;
+    padding-left: 24px;
+    color: black;
+    
 }
 #btn-discont{
+    width: 508px;
     height: 39px;
-    width: 533px;
     border: none;
     background-color: #0062FF;
     color: #FFFFFF;
@@ -346,5 +351,4 @@ p{
     font-size: 16px;
     margin-top: 16px;
     margin-bottom: 105px;
-    margin-left: 454px;
 }

@@ -1,0 +1,371 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    font-size: var(--root-font-size);
+    font-family: 'Shadows Into Light', normal;
+}
+
+.yu-gothic-fonts{
+    font-family: 'Yu Gothic', normal;
+}
+
+.georgia-fonts{
+    font-family: 'Georgia', normal;
+}
+
+:root{
+    --root-font-size: 10px;
+    --header-bg: #668E68;
+    --header-font-color: #FFFFFF;
+    --header-font-size: 18px;
+}
+
+.wrapper{
+    width: 58%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.d-flex{
+    display: flex;
+}
+
+header{
+    background-color: var(--header-bg);
+    padding: 15px 0;
+}
+
+.header-block{
+    justify-content: space-between; /* Працює аналогічно до  margin-right: auto;*/
+    align-items: center;
+}
+
+.menu-block{
+    padding: 0;
+    margin: 0;
+}
+
+.logo-block{
+    margin-right: auto; /* Елемент віджимає від себе всі інші та розташовується справа */
+    font-size: 4.4em;
+    color: var(--header-font-color);
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.menu-block-item{
+    list-style: none;
+    margin-right: 5em;
+}
+
+.menu-block-item>a{
+    font-size: var(--root-font-size);
+    color: var(--header-font-color);
+    text-decoration: none;
+    font-size: 1.8em
+}
+
+.mobile-menu>.fa-times{
+    display: none;
+}
+
+
+
+
+
+.main-block{
+    background-image: url(../img/coffe-bg.jpeg);
+    height: 523px;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -28.4em;
+    background-size: cover;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.title-main-block{
+    font-size: 11em;
+    max-height: 180px;
+    /* padding: 1.6em ; */
+    display: flex;
+    justify-content: center;
+    color: var(--header-font-color);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+
+.menu-block-1{
+
+}
+
+.menu-icons{
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#menu-text{
+    font-weight: 400;
+    font-size: 4em;
+    line-height: 0.9em;
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 0.98em;
+
+}
+
+#menu-text p{
+    font-size: 0.65em;
+}
+
+.circle{
+    width: 350px;
+    height: 350px;
+    border: 9px solid #81613B;
+    border-radius: 200px;
+    /* overflow: hidden; */
+    background-size: cover;
+}
+
+@media (max-width:310px){
+    .circle{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.opacity{
+    background-color: #FFFFFF;
+    opacity: 0.8;
+    width: 330px;
+    height: 91px;
+    position: relative;
+    bottom: -250px;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 26px;
+}
+
+@media (max-width:310px){
+    
+
+    .opacity{
+        width: 230px;
+        height: 77px;
+        bottom: -165px;
+    }
+}
+
+.circle:nth-child(1){
+    background-image: url(../img/drink-menu.jpeg);
+    /* background-size: 30%; */
+    background-position-x: -46px;
+}
+
+.circle:nth-child(2){
+    background-image: url(../img/cakes-menu.jpeg);
+    background-size: 150%;
+    background-position-x: -68px;
+}
+
+.circle:nth-child(3){
+    background-image: url(../img/foods-menu.jpeg);
+    /* background-size: 30%; */
+    background-position-x: 0px;
+}
+
+
+.menu-block-button{
+    margin: 2.5em auto;
+    background: var(--header-bg);
+    border-radius: 20px;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 35px;
+    color: var(--header-font-color);
+    display: flex;
+    font-size: 1.6em;
+    align-items: center;
+    line-height: 26px;
+}
+
+.menu-block-button img{
+    padding-left: 10px;
+    padding-right: 14px;
+}
+
+
+
+
+
+@media (max-width:950px){
+
+    .wrapper{
+        width: 91.79%;
+    }
+
+    .logo-block{
+        --header-font-color:#FFFFFF;
+        color: var(--header-font-color);
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+    
+    .mobile-menu.active .fa-times{
+        display: block;
+    }
+
+    .mobile-menu.active .fa-bars{
+        display: none;
+    }
+
+    .menu-block{
+        display: none;
+    }
+
+    .menu-block.active{
+        display: block;
+        padding: 4.5em;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        top: 33px;
+    }
+
+    .menu-block-item{
+        display: block;
+        text-align: center;
+    }
+
+    .menu-block-item>a{
+        --header-font-color: #639a63;
+        text-align: center;
+        font-size: var(--root-font-size);
+        color: var(--header-font-color);
+    }
+
+    .title-main-block{
+        font-size: 5em;
+        color: var(--header-font-color);
+    }
+
+    .main-block{
+        height: 358px;
+        background-position-y: 0;
+    }
+
+    .circle{
+        width: 300px;
+        height: 300px;
+    }
+
+    .opacity{
+        width: 280px;
+        height: 91px;
+        bottom: -200px;
+        font-size: 26px;
+    }
+
+    .menu-icons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .menu-block-button{
+        margin: 3.1em auto;
+    }
+}
+
+
+
+@media (max-width:1400px){
+    .logo-block{
+        font-size: 3em;
+    }
+
+    .menu-block-item{
+        font-size: 0.7em;
+    }
+
+    .menu-block-item{
+        margin-right: 4.2em;
+    }
+
+    
+
+    
+    
+}
+
+@media (max-width:1550px){
+    
+}
+
+@media (max-width:1850px){
+    
+}
+
+@media (max-width:1400px)
+and (min-width: 950px){
+    .main-block{
+        max-height: 363px;
+        background-position-y: -20em;
+    }
+
+    .title-main-block{
+        font-size: 9em;
+    }
+
+    .circle{
+        width: 250px;
+        height: 250px;
+    }
+
+    .opacity{
+        width: 230px;
+        height: 78px;
+        bottom: -163px;
+    }
+}
+
+@media (max-width:1550px)
+and (min-width:1400px){
+    .circle{
+        width: 250px;
+        height: 250px;
+    }
+
+    .opacity{
+        width: 230px;
+        height: 77px;
+        bottom: -165px;
+    }
+}
+
+
+@media (max-width:1850) 
+and (min-width:1550px){
+    .circle{
+        width: 300px;
+        height: 300px;
+    }
+
+    .opacity{
+        width: 280px;
+        height: 91px;
+        bottom: -200px;
+    }
+}

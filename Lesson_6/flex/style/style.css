@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+}
+
+form{
+    padding: 50px;
+}
+
+input{
+    display: inline-block;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #333;
+    padding: 15px 15px 35px 15px;
+}
+
+input:focus{ /* Функція активного обʼєкту */
+    background-color: rgb(189, 214, 239);
+    outline: none; /* Прибирає синій бордер при активному форм */
+}
+
+header{
+    margin: 0 auto;
+    border: 2px solid red;
+    padding: 50px;
+    width: 920px;
+}
+
+/* Для того, щоб дізнатись, який саме блок "поламав" сторінку, та зробив скролінг, варто закоментувати весь батьківський блок а переміщувати кінець коментаря, перевіряючи, хто насправді винен */
+.scroll{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(122, 217, 82);
+    position: absolute;
+    margin-left: 2000px;
+}
+
+/* Може бути 2 флекси: inline flex i flex.
+
+    Inline flex - схожий на інлайн блок та буде мати ширину по ширині контенту, але з властивостями флекс (Використовується рідко) */
+
+.block{
+    background-color: yellow;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.i-flex{
+    display: inline-flex;
+}
+
+.flex{
+    height: 400px;
+    display: flex; /* Блоки розташовуються по одніц осі */
+    /* flex-wrap: wrap; */ /* Відміняє, або включає перерахування відсотків в флексі.
+    
+    wrap - відключає
+    
+    nowrap - включає*/
+
+    /* flex-wrap: wrap-reverse; */ /* Обʼєкти, що не помістились переміщуються не вниз, а вверх */
+
+    /* flex-direction: column; */ /* При вказанні цієї властивості, блоки будуть вести себе як звичайні, але із властивостями flex (розташування зверху вниз один під одним)
+    
+    column-reverse - міняє напрямок розташування знизу вгору
+    
+    row-reverse - міняє напрямок розташування справа наліво*/
+
+    /* flex-flow: row-reverse wrap; */ /* Зберігає властивості flex-wrap + flex-direction */
+
+    /* justify-content: space-between; */
+    /*
+    flex-end - міняє розташування справа-наліво
+    
+    cemter - розміщує блоки по центру осі (вирівнювання по х і у)
+    
+    space-berween - рівномірно розприділяються по ширині плоку (прижимаються по краям блоку)
+    
+    space-around - блоки роблять між собою рівні відступи (НЕ прижимаються по краям блоку) */
+
+    align-items: flex-end; /* Задає вирівлювання елементів вздовж горизонтальної осі 
+    
+    center - вирівнювання посередині
+    
+    baseline - вирівнювання за однією лінією
+    
+    flex-end - блоки будуть прижаті до низу батьківського блоку
+    
+    flex-start - блоки будуть прижаті до верху батькувського блоку */
+
+    /* gap: 10px 200px; */ /* Робить відстань між елементами в батьківському блоці */
+
+    /* row-gap: 50px; */ /* Робить відступи для рядів */
+
+    /* column-gap: 100px; */ /* Робить відступи для колонок */
+}
+
+.flex-item{
+    width: 100%;
+    background-color: blue;
+    padding: 20px;
+    border: 1px solid #fff;
+}
+
+.flex-item:nth-child(1){
+    height: 50px;
+    width: 200px;
+    /* font-size: 40px; */
+    /* order: 1; */ /* За допомогою цього стилю, можемо міняти положення елементу в батьківському блоці. Чим більше значення, тим правіше стоятиме елемент. По замовчуванню має зн-ня 0. */
+
+    /* flex-grow: 1; */ /* Пропорційне розташування елементу відносно батьківського блоку. За замовчуванням зн-ня 0. */
+
+    /* flex-shrink: 2; */
+
+    /* align-self: center; Вирівнювання елементів кожного окремо */
+}
+
+.flex-item:nth-child(2){
+    height: 150px;
+    /* font-size: 30px; */
+    /* order: 3; */
+    /* flex-grow: 3; */
+    /* flex-shrink: 4; */
+    /* align-self: self-end; */
+}
+
+.flex-item:nth-child(3){
+    /* height: 300px; */
+    /* order: 2; */
+    flex-grow: 3;
+    /* flex-shrink: 4; */
+    align-self: flex-start;
+}

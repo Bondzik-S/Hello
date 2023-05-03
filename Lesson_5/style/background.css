@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+.simple-background{
+    width: 480px;
+    height: 480px;
+    background-color: yellow;
+    background-image: url(../img/smile.png); /* Дві крапки для виходу з каталогу */
+    color: black;
+}
+
+.double-bg{
+    height: 600px;
+    background-image: url(../img/avatar.png), url(../img/1.webp);
+    /* background-repeat: repeat-x; /* Повторення тальки по іксу або ігрику */
+    /* background-repeat: repeat-y; */
+    background-repeat: no-repeat; /* Без повторів */
+    /* opacity: 0.1; Прозорість */
+    background-position: bottom right; /* Положення бекграунду відносно блоку */
+    background-position: top 50px left 200px;
+}
+
+.bg-size{
+    border: 5px solid black;
+    height: 700px;
+    background-image: url(../img/avatar.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* cover - зображення буде розтягнуте по всій ширині (без урахування висоти)
+
+    contain - займатиме всю висоту блока та буде повторюватись
+
+    можна задати ширину та довжину в пікселях (будуть повторюватись)
+
+    задати в відсотках - буде займати обраний відсоток від параметрів всього блоку
+     */
+}
+
+.big-bg{
+    width: 1200px;
+    margin: 0 auto 300px;
+    height: 800px;
+    padding: 400px 500px;
+    color: white;
+    background-image: url(../img/bg.jpeg);
+    background-size: 80%;
+    overflow: hidden; /* Обрізає текст, що виходить за межі блоку */
+    background-attachment: fixed;
+}

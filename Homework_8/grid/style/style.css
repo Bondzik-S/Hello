@@ -1,0 +1,40 @@
+/* У гріда є декілька властивостей: inlone-grid, display-grid */
+
+.inline-grid{
+    display: inline-grid;
+}
+.grid{
+    display: grid;
+    /* grid-template-columns: 100px 250px 200px; /* Зміна розмірів колонок */
+    /* grid-template-rows: 300px 100px 300px; /* Зміна розмірів рядів */
+
+    /* grid-template-columns: repeat(6, 100px); /* Запис через repeat(). Перше число - число повторів (колонок), друге число - розмірність */
+
+    /* grid-template-columns: repeat(3, 100px) 200px 150px; /* Ще один варіант з використанням ф-ції  repeat() - перші 3 колонки по 100px, далі 200 та 150 відповідно (також можна обирати відсотки замість пікселів)*/
+
+    grid-template-columns: minmax(300px, 1fr) 2fr 1fr; /* Фрактали розраховують рощмірність відповідно */
+
+    
+
+    /* minmax - вл-ть, яка допомагає в орієнтації сторінки на пристроях. Перше значення - мінімальне, друге - більше мінімального */
+
+    grid-column-gap: 10px; /* Відступи в грідах (колонки) */
+    grid-row-gap: 30px; /* Відступи в грідах (рядки) */
+}
+
+.grid>div{
+    padding: 20px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+}
+
+
+/* Розміщення блоків гріду за координатами (дивитись в інструментах розробника при натисканні на грід поряд з потрібним елементом) */
+/* Заготовка для дз */
+.grid div:nth-child(5){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}

@@ -1,0 +1,138 @@
+//                          Припроцесори
+// sass -> scss
+// less
+// stylus
+
+//Змінні в scss. Позначаються через знак доллара "$"
+$main-color:#333;
+$title-color: red;
+$title-color-hover: yellow;
+
+//В припроцесорах присутні вложеності, тобто, щоб указати якийсь обʼєкт, який знаходиться всережині іншого, достатньо його так і розмістити всередині правила батьківського елементу
+nav{
+    background-color: $main-color;
+
+    ul{
+        margin: 0;
+        padding: 0;
+
+        li{
+            list-style: none;
+        }
+    }
+}
+
+
+// Для того, щоб додавати подію до батьківського елементу (не прописувати знову його назву), маємо використовувати знак амперсанта "&" та всередині потрібного елементу зазначити подію наступним чином:
+h1{
+    position: relative;
+    display: inline-block;
+    &:hover{
+        color: $title-color;
+        font-size: 30px;
+
+        span{
+            color: $title-color-hover;
+        }
+    }
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: $title-color-hover;
+        right: -30px;
+    }
+}
+
+ul{
+    li{
+        background-color: black;
+        &:nth-child(2){
+            background-color: $title-color;
+            &:hover{
+                background-color: $title-color-hover;
+            }
+        }
+        &:nth-child(4){
+            background-color: $title-color;
+        }
+    }
+}
+
+
+//Щоб не повторювати купу разів назву батьківського класу, можна використати наступний синтаксис:
+.about{
+    &-title{
+        color: $title-color;
+        &:hover{
+            //color: darken($color: $title-color, $amount: 50%); //dsrken() - ф-ція, яка затемняє колір. Має змінні $color і $amount.
+
+            color: lighten($color: $title-color, $amount: 20%); //lighten() - ф-ція, яка затемняє колір. Має змінні $color і $amount.
+
+            color: desaturate($color: yellow, $amount: 90%); //desaturate() - насыщенность
+            font-size: 40px;
+        }
+    }
+    &-text-container{
+        color: gray;
+    }
+    &.update{
+        background-color: #ccc;
+    }
+    @media (max-width:1600px){
+        background-color: $main-color;
+        h2{
+            text-decoration: underline;
+        }
+        &.update{
+            background-color: green;
+        }
+    }
+}
+// & буде посилатись на батьківський обʼєкт
+
+//Рекомендовано не робити вложеності більше 3-х разів
+
+//Медіа запити записуються як зазвичай
+
+.button{
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+
+    &:hover{
+        background-color: yellow
+    }
+}
+
+.my-button{
+    @extend .button; //@extend - обʼєднує стилі (дублює їх до обраного обʼєкту)
+    background-color: blueviolet;
+}
+
+.block-1{
+    padding: 10px;
+}
+
+.block-2{
+    padding: 20px;
+}
+
+// mixin - набір правил, які можна використовувати повторно. Синтаксис: @mixin <name mixin> (змінні)
+
+@mixin square($size, $radius: 0){
+    width: $size;
+    height: $size;
+    @if $radius != 0 {
+        border-radius: $radius;
+    }
+}
+
+.avatar{
+    background-color: #333;
+    margin: 20px;
+    @include square(50px);
+}

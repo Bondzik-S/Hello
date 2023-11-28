@@ -1,0 +1,52 @@
+body {
+    margin: 0 auto;
+    font-family: 'Work Sans', sans-serif;
+}
+
+header {
+    width: 500px;
+    background: black;
+    color: white;
+    font-weight: 700;
+    margin: auto;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+}
+table {
+    width: 500px;
+    background: black;
+    color: white;
+    font-weight: 700;
+    margin: auto;
+}
+
+tr {
+    height: 1.5rem;
+}
+
+.red {
+    color: red;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;  
+}
+
+.header {
+    margin-left: 5rem;
+   text-transform: uppercase;
+}
+
+.image {
+    border: 1px solid white;
+    margin-left: 2rem;
+    width: 35px;
+    height: 18px;
+    background-image: url(img/flags.jpg);
+    background-size: 2500%;
+}
+ 

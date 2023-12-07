@@ -26,10 +26,25 @@
 
         .card{
             border: 1px solid black;
+            text-align: center;
         }
 
         .card img{
             max-width: 90%;
+        }
+
+        .card-name{
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .card-price{
+            font-size: 1.05rem;
+            color: green;
+        }
+
+        .card-price::after{
+            content:" $";
         }
     </style>
 </head>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .highlight {
+            background-color: yellow; /* Встановлює жовтий фон для елементів з класом "highlight" */
+        }
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
+    <br />
+    <input type="button" onclick="selectFirstChild()" style="width: 210px;" value="Выбрать первый элемент" /><br />
+    <input type="button" onclick="selectLastChild()" style="width: 210px;" value="Выбрать последний элемент" /><br />
+    <input type="button" onclick="selectNextNode()" style="width: 210px;" value="Выбрать следующий элемент" /><br />
+    <input type="button" onclick="selectPrevNode()" style="width: 210px;" value="Выбрать предыдущий элемент" /><br />
+    <input type="button" onclick="createNewChild()" style="width: 210px;" value="Добавить элемент" /><br />
+    <input type="button" onclick="removeLastChild()" style="width: 210px;" value="Удалить элемент" /><br />
+    <input type="button" onclick="createNewChildAtStart()" style="width: 210px;" value="Добавить в начало" /><br />
+
+    <script>
+        function clearHighlights() {
+            const highlighted = document.querySelector(".highlight");
+            if (highlighted) {
+                highlighted.classList.remove("highlight");
+            }
+        }
+
+        function selectFirstChild() {
+            clearHighlights(); // Очищає попередні підсвічування
+            document.getElementById("list").firstElementChild.classList.add("highlight"); // Додає клас "highlight" до першого дочірнього елемента списку
+        }
+
+        function selectLastChild() {
+            clearHighlights(); // Очищає попередні підсвічування
+            document.getElementById("list").lastElementChild.classList.add("highlight"); // Додає клас "highlight" до останнього дочірнього елемента списку
+        }
+
+        function selectNextNode() {
+            const currentHighlighted = document.querySelector(".highlight"); // Знаходить елемент з класом "highlight"
+            if (currentHighlighted && currentHighlighted.nextElementSibling) {
+                clearHighlights(); // Очищає попередні підсвічування
+                currentHighlighted.nextElementSibling.classList.add("highlight"); // Додає клас "highlight" до наступного дочірнього елемента
+            }
+        }
+
+        function selectPrevNode() {
+            const currentHighlighted = document.querySelector(".highlight"); // Знаходить елемент з класом "highlight"
+            if (currentHighlighted && currentHighlighted.previousElementSibling) {
+                clearHighlights(); // Очищає попередні підсвічування
+                currentHighlighted.previousElementSibling.classList.add("highlight"); // Додає клас "highlight" до попереднього дочірнього елемента
+            }
+        }
+
+        function createNewChild() {
+            clearHighlights(); // Очищає попередні підсвічування
+            const list = document.getElementById("list");
+            const newListItem = document.createElement("li");
+            newListItem.textContent = "New Item";
+            list.appendChild(newListItem); // Додає новий дочірній елемент до списку
+        }
+
+        function removeLastChild() {
+            const list = document.getElementById("list");
+            const highlightedItem = list.querySelector(".highlight");
+            
+            if (highlightedItem) {
+                list.removeChild(highlightedItem); // Видаляє елемент з класом "highlight"
+            }
+        }
+
+
+        function createNewChildAtStart() {
+            clearHighlights(); // Очищає попередні підсвічування
+            const list = document.getElementById("list");
+            const newListItem = document.createElement("li");
+            newListItem.textContent = "New Item";
+            list.insertBefore(newListItem, list.firstElementChild); // Додає новий дочірній елемент на початок списку
+            newListItem.classList.add("highlight"); // Додає клас "highlight" до нового дочірнього елемента
+        }
+    </script>
+</body>
+</html>

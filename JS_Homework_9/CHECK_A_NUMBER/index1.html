@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .right {
+            background-color: rgba(45, 221, 45, 0.834);
+        }
+
+        .wrong{
+            background-color: rgba(243, 37, 37, 0.808);
+        }
+
+        #error-message{
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <p>Перевірка номеру телефону. Введіть свій номер телефону, починаючи з 0.
+    </p>
+    <input class="input" type="tel" placeholder="0XXXXXXXXX" maxlength="10" value="">
+    <input class="button" type="button" value="Перевірити">
+    <div id="error-message"></div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

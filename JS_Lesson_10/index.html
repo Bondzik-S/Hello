@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Все до прикладу 4 */
+        body{
+            display: flex;
+        }
+        .green {
+            background-color: green;
+            height: 50px;
+            width: 50px;
+            margin: 10px;
+            transition: all 1s;
+        }
+
+        .red{
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Приклад 1 -->
+
+    <!--Обробник події click-->
+    <input type="button" name="button1" value="Натисни мене" onclick="alert('Привіт')" />
+
+    <!--Якщо обробник складається з кількох інструкцій, вони повинні бути розділені ';'-->
+    <input 
+    type="button" 
+    name="button1" 
+    value="Натисни мене"
+    onclick="if (window.counter) counter++; else counter = 1; this.value = counter;" />
+
+    <form>
+        <input type="text" name="firstName" />
+        <br />
+        <!--confirm - обробник події, який має прийняти значення true або false і в залежності від цього виконати дію. Якщо обробник confirm повертає false, дія скасовується.-->
+        <!-- Інпут з тайпом ресет відповідає за повне скидання даних в інпуті -->
+        <input type="reset" onclick="return confirm('Ви впевнені?')" />
+
+        <!-- Інпут з такпом сабміт відповідає за відправку даних на сервер -->
+        <!--Обробник встановлено як функція з тега script-->
+        <input type="submit" onclick="validate()" />
+    </form>
+
+
+
+
+
+    <!-- Приклад 2 -->
+
+    <p id="p1">
+        click me!
+    </p>
+
+    <!-- contenteditable - це надання можливості редагувати вміст -->
+    <h1 contenteditable id="p2">
+        hello world
+    </h1>
+
+
+
+
+
+    <!-- Приклад 3 -->
+
+    <!-- Використано навʼязливий js -->
+    <body onload="loadHandler()">
+
+        <!--Ключевое слово this ссылается на элемент, в котором произошло событие-->
+        <input type="button" value="Click me!" onclick="this.value = 'clicked!'" />
+        <input type="button" id="input1" value="Click me!" />
+
+    </body>
+
+
+
+
+
+    <!-- Приклад 4 -->
+
+    <p class="green"></p>
+    <p class="green"></p>
+    <p class="green"></p>
+    <p class="green"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

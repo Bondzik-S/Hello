@@ -183,3 +183,71 @@
 
         }, false);
 }
+
+//
+// Приклад 7.
+// Створити кнопку з полем вводу. В поле вводу написати ім'я тегу який потрібно створити. Після натиску кнопки створити тег відкрити модальне вікно яку показуватиме у вигляді кнопок всі стилі які є у цього тяга. 
+// На модальному вікні має бути ❌ який закриває модалку
+{
+    window.addEventListener("DOMContentLoaded", (e) => {
+
+        const wrapper = document.querySelector("#wrapper");
+        
+        // Делегування подій. При роботі із вкладенностями, замість того, щоб писати подію клік на всі елементи всередині діву (тобто параграфи), ми пишемо подію на батьківський елемент, який буде перехоплювати всі інші, а в змінній target буде зберігатись імʼя елементу, який було натиснуто
+        wrapper.addEventListener("click", (e) => {   
+            if(e.target.tagName === "DIV"){
+                return
+            }  
+
+            e.target.classList.add("red");
+        }, false);
+        
+
+    }, false);
+}
+
+//
+//
+//
+// Обʼєкт Event
+
+//
+// Приклад 1.
+{
+    // В js в один час може працювати тільки одна подія, оскільки js - це однопотокова мова програмування
+    // параметр e будет передаваться в IE только при регистрации события через attachEvent
+    const handler = (e) => {
+        if (!e) e = window.event; // получение информации о событии в IE
+        // тело обработчика события
+    }
+
+    const handler2 = (e) => {
+        const e = e || window.event; // второй вариант.
+    }
+
+    window.addEventListener('DOMContentLoaded', handler);
+}
+
+//
+// Приклад 2.
+{
+    window.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            const div = document.querySelector("div");
+
+            div.addEventListener("mousemove", handler); // mousemove - подія наведення     
+        }
+
+        const handler = (e) => {
+            let message = "";
+            message += e.button + "<br />";                 // 0 - левая клавиша, 1 - средняя клавиша, 2 - правая.
+            message += "Alt: " + e.altKey + "<br />";       // true если клавиша Alt зажата.
+            message += "Ctrl: " + e.ctrlKey + "<br />";     // true если клавиша Ctrl зажата.
+            message += "Shift: " + e.shiftKey + "<br />";   // true если клавиша Shift заэата.
+            message += "X: " + e.clientX + "<br />";        // координаты относительно левого верхнего угла документа.
+            message += "Y: " + e.clientY + "<br />";        // координаты относительно левого верхнего угла документа.
+            document.getElementById("output").innerHTML = message;
+            document.querySelector("section").style.left = (e.clientX * 4.5) + "px"; // Позиція секшн
+        }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /* Приклад 1. */
+        body{
+            height: 100vh;
+        }
+
+
+
+        /* Приклад 2. */
+        p {
+            width: 120px;
+            height: 40px;
+            color: #fff;
+            background-color: rgb(0, 30, 128);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .menu {
+            width: 150px;
+            box-shadow: 3px 3px 5px #888888;
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 3px 5px;
+            position: fixed;
+            display: none;
+            background-color: rgb(29, 26, 204);
+       
+        }
+
+        .menu-item {
+            height: 20px;
+        }
+
+        .menu-item:hover {
+            background-color: #fdff6c;
+            cursor: pointer;
+        }
+
+        .menu-item:hover a{
+            color: black;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+
+
+        /* Приклад 4. */
+        img,
+        textarea {
+            width: 200px;
+            height: 120px;
+        }
+
+        .error{
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Приклад 1. -->
+
+    <button>Клик правой кнопкой мыши</button>
+
+
+
+
+    <!-- Приклад 2 -->
+
+    <section></section>
+    <div>
+        <p>Click me</p>
+        <div class="menu">
+            <div class="menu-item"><a href='https://facebook.com'>Share On Facebook</a></div>
+            <div class="menu-item"><a href='#'>Share On Twitter</a></div>
+            <hr>
+            <div class="menu-item"><a href='https://google.com'>Search On Google</a></div>
+            <div class="menu-item"><a href='#'>Search On Bing</a></div>
+            <hr>
+            <div class="menu-item"><a href='#'>Bookmark</a></div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Приклад 3. -->
+
+    <div>
+        Уважаемый пользователь, к сожалению Вы не можете скопировать данный код. Печатайте руками. Спасибо.
+    </div>
+
+
+
+
+
+
+    <!-- Приклад 4. -->
+
+    <textarea placeholder="Введите текст с картинки"></textarea>
+    <img src="./imgs/001.png">
+    <div class="error"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

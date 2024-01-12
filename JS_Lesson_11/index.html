@@ -5,11 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        /* Приклад 1. */
+        p {
+            background-color:red;
+            width:100px;
+            height:100px;
+            transition: all 1s;
+        }
+
+        .hover{
+            background-color: yellow;
+        }
+
+        div{
+            position: absolute;
+            top: calc(50vh - 100px);
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            border-radius: 50%;
+            display: none;
+        }
+
+        .show{
+            display: block;
+        }
+
+
+
+
+        /* Приклад 2. */
+        section {
+            display: flex;
+        }
+
+        div {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            height: 400px;
+            width: 400px;
+        }
+
+        #div1 {
+            background-color: red;
+        }
+
+        #div2 {
+            background-color: green;
+        }
+
+        #div3 {
+            background-color: blue;
+        }
+
+
+
+
+
+
+    </style>
 </head>
 <body>
     
+    <!-- Приклад 1. -->
+
+    <p></p>
+
+    <div></div>
 
 
+
+
+    <!-- Приклад 2 -->
+
+    <section>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </section>
 
 
     <script src="script.js"></script>

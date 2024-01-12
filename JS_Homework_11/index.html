@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dz_11_part_1</title>
+    <link rel="stylesheet" href="./style/style.css">
+
+
+    <style>
+        .focus{
+    border: 15px solid rgb(15, 206, 15);
+}
+
+.error {
+    border: 15px solid rgb(214, 16, 16);
+}
+
+.valid {
+    color: rgb(9, 166, 9);
+}
+
+input{
+    padding: .4rem;
+    width: 400px;
+}
+    </style>
+</head>
+<body>
+    <div><input type="text" placeholder="Price"></div>
+
+    <script>
+        const input = document.querySelector(`input`);
+const span = document.createElement(`span`);
+const btn = document.createElement(`button`)
+
+input.addEventListener("focus", (ev) => {
+    span.remove();
+    ev.target.className = "";
+    ev.target.classList.add("focus");
+    ev.target.value = ``;
+})
+
+input.addEventListener("change", (ev) => {
+    ev.target.className = "";
+    if(/^(0|[1-9]\d*)(\.[0-9]{1,})?$/.test(ev.target.value)){
+        ev.target.classList.add("valid")
+        span.textContent = ev.target.value;
+        btn.textContent = `X`;
+        ev.target.parentNode.before(span, btn);
+    }else{
+        ev.target.classList.add("error");
+        ev.target.parentNode.after(span);
+        span.textContent = `Please enter correct price`;
+    } 
+})
+
+btn.addEventListener(`click`, (ev) => {
+    span.remove();
+    ev.target.remove();
+    input.value = ``;
+})
+    </script>
+    <script src="./code/code.js"></script>
+</body>
+</html>
